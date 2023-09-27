@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0eef1;
+  font-size: 18px;
+  font-weight: 500;
+  word-wrap: break-word;
+  margin-bottom: 100px;
+}
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  outline: none;
+}
+main {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.addBtn {
+  text-align: center;
+  padding: 10px;
+  height: 40px;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 510;
+  line-height: 22px;
+  color: #056dfa;
+  letter-spacing: 1px;
+}
+
+.addBtn:hover {
+  background: #056bfa27;
+}
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+dialog {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0;
+  background: #f0eef1;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+}
+input[type="text"],
+input[type="number"] {
+  cursor: text;
+}
+.is-read {
+  display: flex;
+  gap: 15px;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  accent-color: white;
+}
+.sub {
+  display: block;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  width: 80%;
+  background-color: white;
+  transition: 0.2s;
+  box-shadow: 0px 4px 1px black;
+}
+.sub:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  line-height: 1.2;
+}
+.redBoldTextNode {
+  color: red;
+  font-weight: bold;
+}
