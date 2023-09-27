@@ -15,7 +15,7 @@ Book.prototype.toggleRead = function () {
   this.read = !this.read;
 };
 
-function readBtn(button, index) {
+function readBtn(index) {
   myLibrary[index].toggleRead();
   render();
 }
@@ -39,11 +39,14 @@ function render() {
     bookEl.innerHTML = `
     <h3>${book.title}</h3>
     <span>by: ${book.author}</span>
-    <span>Number of pages: ${book.pages}</span>
-    <button class="remove-btn" onclick="removeBtn(${i})">Remove</button>
-    <button class="toggleRead-btn" onclick="readBtn(this, ${i})">
+    <span>${book.pages} page</span>
+    <button class="toggleRead-btn btn" onclick="readBtn( ${i})"  style="background-color: ${
+      book.read ? "#9fff9c" : "#ff7070"
+    }">
     ${book.read ? "Read: ✔" : "Read: ✖"}
   </button>
+    <button class="remove-btn btn" onclick="removeBtn(${i})">Remove</button>
+ 
     `;
     bookEl.setAttribute("class", "book-card");
     myLibraryEl.appendChild(bookEl);

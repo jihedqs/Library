@@ -3,12 +3,29 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 body {
   background-color: #f0eef1;
   font-size: 18px;
   font-weight: 500;
   word-wrap: break-word;
   margin-bottom: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+  margin: 0 auto;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  color: #056dfa;
 }
 button,
 input {
@@ -26,6 +43,14 @@ main {
   max-width: 1200px;
   padding: 20px;
   margin: 0 auto;
+}
+.btn {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+.toggleRead-btn {
+  color: white;
 }
 .addBtn {
   text-align: center;
@@ -63,7 +88,9 @@ dialog {
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.4);
 }
-
+.remove-btn {
+  border: 2px solid #f44336;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -98,7 +125,7 @@ input[type="number"] {
   width: 80%;
   background-color: white;
   transition: 0.2s;
-  box-shadow: 0px 4px 1px black;
+  box-shadow: 0px 4px 1px #056dfa;
 }
 .sub:active {
   transform: translateY(2px);
@@ -107,7 +134,7 @@ input[type="number"] {
 
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
   margin-top: 50px;
 }
@@ -123,7 +150,24 @@ input[type="number"] {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   line-height: 1.2;
 }
-.redBoldTextNode {
-  color: red;
-  font-weight: bold;
+footer {
+  position: absolute;
+  bottom: 0;
+  gap: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+.gitblack {
+  color: #2e2f38;
+  font-size: 25px;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    display: none;
+  }
 }
